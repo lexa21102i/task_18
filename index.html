@@ -20,9 +20,9 @@
                 <li class="header-navigation_item"><a href="#">TEAM</a></li>
                 <li class="header-navigation_item"><a href="#">REVIEWS</a></li>
                 <li class="header-navigation_item"><a href="#">CONTACTS</a></li>
-                <li class="header-phone"><span>+7 (928) 768-32-39</span></li>
             </ul>
         </nav>
+        <div><span class="header-phone">+7 (928) 768-32-39</span></div> 
         <button class="button">Request a call</button>
         </div>
     </header>
@@ -39,16 +39,9 @@
             <div class="hero-overlay"></div>
         </section>
         <section class="completed-projects">
-    <div class="projects-container">
-        <div class="project-nav">
-            <a href="#" class="project-nav-link active">Rostov-on-Don, Admiral</a>
-            <a href="#" class="project-nav-link">Sochi Thieves</a>
-            <a href="#" class="project-nav-link">Rostov-on-Don Patriotic</a>
-        </div>
-        <div class="project-image">
-            <img src="./images/Admiral.jpg" alt="Rostov-on-Don Admiral project">
-        </div>
-        <div class="projects-left">
+    <div class="container projects-container">
+        <div class="left">
+            <div class="projects-left">
             <h2 class="projects-title">COMPLETED <br>PROJECTS</h2>
             <p class="projects-description">
                 Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families.
@@ -79,15 +72,30 @@
                 </div>
             </div>
         </div>
+        </div>
+        <div class="right">
+            <div class="project-nav">
+            <a href="#" class="project-nav-link">Rostov-on-Don, Admiral</a>
+            <a href="#" class="project-nav-link">Sochi Thieves</a>
+            <a href="#" class="project-nav-link">Rostov-on-Don Patriotic</a>
+        </div>
+        <div class="project-image">
+            <img src="./images/Admiral.jpg" alt="Rostov-on-Don Admiral project">
+        </div>
+        </div>
     </div>
 </section>
 <section class="control">
-    <h3 class="online-control-text">ONLINE CONTROL</h3>
+    <div class="container">
+        <h3 class="online-control-text">ONLINE CONTROL</h3>
     <div class="camera-icon">
         <img src="./images/camera.png" alt="icon">
     </div>
     <div class="repair-image">
-        <img src="./images/repair.jpg" alt="repair">
+        <div class="image-wrapper">
+            <img src="./images/repair.jpg" alt="repair">
+        <div class="img-overlay"></div>
+        </div>
         <img src="./images/play.png" alt="play" class="play-icon">
     </div>
     <div class="repair-line"></div>
@@ -122,9 +130,11 @@
     <div class="check-mark-text">I agree to the processing of personal data
     </div>
     </div>
+    </div>
 </section>
 <section class="repair">
-    <h3 class="types-of-repair-text">TYPES OF REPAIR</h3>
+    <div class="container">
+        <h3 class="types-of-repair-text">TYPES OF REPAIR</h3>
     <div class="repair-icon">
         <img src="./images/repair.png" alt="icon">
     </div>
@@ -177,6 +187,80 @@
                 <button class="price-button">from 4000 rub / m2</button>
             </div>
         </div>
+        <img src="./images/city_1.jpg" alt="city_1" class="city_1-image">
+    </div>
+    <div class="measurements">
+        <div class="measurements-list">
+            <div class="list-item">
+                <div class="list-1">
+                <span class="list-number">01</span>
+                </div>
+            <span class="list-text">Our specialist will arrive for measurements per day
+contact, or appoint a date convenient for you</span>
+            </div>
+            <div class="list-item">
+                <div class="list-2">
+                <span class="list-number">02</span>
+            </div>
+            <span class="list-text">Free metering</span>
+            </div>
+            <div class="list-item">
+                <div class="list-3">
+                <span class="list-number">03</span>
+            </div>
+            <span class="list-text">Free consultation</span>
+            </div>
+            <div class="list-item">
+                <div class="list-4">
+                <span class="list-number">04</span>
+            </div>
+                <span class="list-text">Get a cost estimate and
+the timing of your future repairs</span>
+            </div>
+        </div>
+        <div class="measurements-form-block">
+            <form class="measurements-form">
+                <div class="measurements-title">
+                    Leave a request for free
+departure of the measurer
+                </div>
+    <div class="name-label">
+        <label for="name">Name</label>
+        <div class="name-input-wrapper">
+            <span class="input-label">What is your name:</span>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="input-line"></div>
+    </div>
+    <div class="phone-label">
+        <label for="phone">Phone</label>
+        <div class="phone-input-wrapper">
+            <span class="input-label">Your phone number:</span>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="input-line"></div>
+    </div>
+    <div class="email-label">
+        <label for="email">Email</label>
+        <div class="email-input-wrapper">
+            <span class="input-label">Your email</span>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="input-line"></div>
+    </div>
+    <div class="check-mark-wrapper">
+    <div class="check-mark">
+        <img src="./images/check-mark.png" alt="icon">
+    </div>
+    <div class="check-mark-text">I agree to the processing of personal data
+    </div>
+    </div>
+    <button type="submit" class="submit-btn">
+        <span>Submit</span>
+    </button>
+    </form>
+        </div>
+    </div>
     </div>
 </section>
     </main>
