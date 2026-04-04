@@ -552,8 +552,8 @@ body * {
 }
 
 .submit-btn span {
-    width: 49px;
-    height: 27px;
+    /* width: 49px;
+    height: 27px; */
     font-family: 'Nunito Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -734,17 +734,15 @@ body * {
     border-radius: 2px;
 }
 
-.city_1-image {
-    position: absolute;
-    left: -250px;
-    top: calc(100% + 411px);
-    width: 1006px;
-    height: 645px;
-    object-fit: cover;
-    z-index: 0;
+.measurements {
+    width: 100%;
+    background-image: url('./images/city_1.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
 }
 
-.measurements {
+.measurements-block {
     display: flex;
     z-index: 2;
     margin-top: 413px;
@@ -755,8 +753,10 @@ body * {
 .measurements-list {
     display: flex;
     flex-direction: column;
-    gap: 102.03px;
+    gap: 5%;
     width: 40%;
+    margin: 30px 0 30px 0;
+    justify-content: space-between;
 }
 
 .measurements-list .list-1, .list-2, .list-3, .list-4 {
@@ -803,18 +803,13 @@ body * {
 }
 
 .list-item {
-    /* display: flex;
-    z-index: 100;
-    vertical-align: middle;
-    align-items: center; */
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    margin-bottom: 30px;
 }
 
 .list-text {
-    /* align-self: center; */
+     align-self: center;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 14px;
     line-height: 1.5;
@@ -825,50 +820,104 @@ body * {
 .measurements-form {
     position: relative;
     z-index: 1;
+
+    background: #131313;
+    height: 100%;
+    display: block;
+    padding: 30px 40px;
 }
 
-.measurements-form .name-label, .measurements-form .phone-label, .measurements-form .email-label, .measurements-form .input-line {
+.measurements-form .name-label,
+.measurements-form .phone-label,
+.measurements-form .email-label,
+.measurements-form .input-line {
     width: 100%;
-    /* margin-bottom: 50px; */
-    margin-bottom: 30px;
+     margin-bottom: 50px;
+}
+
+.measurements-form label,
+.measurements-form .input-line
+{
+    color: rgba(209, 209, 209, 0.3);
+    border-color: rgba(209, 209, 209, 0.3);
+}
+
+.measurements-form .input-label,
+.measurements-form .agreement-checkbox {
+    color: white;
 }
 
 .measurements-form-block {
-    /* width: 40%;
-    background: black; */
-    background: #131313;
     padding: 30px 40px;
-    border-radius: 8px;
     width: 45%;
 }
 
 .measurements-form .check-mark-wrapper {
-    /* margin-top: -85px;
-    justify-content: start;
-    margin-bottom: 35px; */
     margin-top: 20px;
     justify-content: flex-start;
     margin-bottom: 30px;
 }
 
 .measurements-form .submit-btn {
-    float: right; 
-  
+    float: right;
+    margin-bottom: 30px;
 }
 
 .measurements-title {
-    /* text-align: center;
-    margin-bottom: 90px; */
     font-family: 'Yeseva One', cursive;
     font-size: 18px;
     line-height: 1.4;
     text-align: center;
     color: #FFFFFF;
-    margin-bottom: 40px;
+    margin-bottom: 85px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .measurements-form .input-line {
     width: 100%;
+}
+
+.agreement-wrapper {
+    margin-top: -80px;
+    margin-bottom: 40px;
+}
+
+.agreement-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.agreement-checkbox input {
+    display: none;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+}
+.agreement-checkbox input:checked + .checkmark {
+    background-color: #E3B873;
+    border-color: #E3B873;
+}
+
+.agreement-checkbox input:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 3px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
 }
 
 .apartment {
@@ -985,4 +1034,98 @@ body * {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     margin-top: -300px;
+}
+
+.clients {
+    margin-top: 80px;
+    margin-bottom: ;
+}
+
+.our-clients {
+    margin-bottom: 35px;
+}
+
+.customers {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 31px;
+}
+
+.customers-card {
+    width: 30%;
+}
+
+.white-rectangle-2 {
+    /* position: absolute; */
+    /* top: 294px;
+    left: 31px; */
+    /* width: calc(100% - 62px);
+    height: 286px; */
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    padding: 15px;
+}
+
+.customers-name {
+    /* position: absolute; */
+    /* top: 25px;
+    left: 34px;
+    width: 228px;
+    height: 21px; */
+    font-family: 'Yeseva One', cursive;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #363636;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.customers-text {
+    /* position: absolute; */
+    /* top: 59px;  
+    left: 34px;
+    width: 267px;
+    height: 178px; */
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 27px;
+    color: #959595;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 15px;
+}
+
+.customers-button {
+    display: flex;
+}
+
+.customers-button-1, .customers-button-2 {
+    /* position: absolute; */
+    /* top: 260px;
+    left: 0; */
+    width: calc(50% - 1px);
+    height: 54px;
+    background: #E3B873;
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+    border: none;
+    font-family: 'Yeseva One', cursive;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 2px;
+}
+
+.customers-button-1, .customers-button-2 {
+    margin-right: 2px;
 }
