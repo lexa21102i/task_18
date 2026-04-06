@@ -1155,6 +1155,136 @@ body * {
     display: inline-block;
 }
 
+.questions-form {
+    position: relative;
+    z-index: 1;
+    background: #131313;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 30px 40px;
+    width: 100%;
+}
+
+.questions-form .name-label,
+.questions-form .phone-label,
+.questions-form .question-label,
+.questions-form .input-line {
+    width: 100%;
+     margin-bottom: 0;
+}
+
+.questions-form label,
+.questions-form .input-line
+{
+    color: rgba(209, 209, 209, 0.3);
+    border-color: rgba(209, 209, 209, 0.3);
+}
+
+.questions-form .input-label,
+.questions-form .agreement-checkbox {
+    color: white;
+}
+
+.questions-form-block {
+    padding: 30px 40px;
+    width: 45%;
+}
+
+.questions-form .check-mark-wrapper {
+    margin-top: 20px;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.questions-form .submit-btn {
+    grid-column: span 2;
+    float: none;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.questions-title {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    grid-column: span 2;
+    margin-bottom: 20px;
+}
+
+.questions-form .name-label {
+    grid-column: 1 / 2;
+}
+
+.questions-form .phone-label {
+    grid-column: 2 / 3;
+}
+
+.questions-form .question-label {
+    grid-column: span 2;
+}
+
+.questions-form .agreement-wrapper {
+    grid-column: span 2;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.questions-form .input-line {
+    width: 100%;
+}
+
+.agreement-wrapper {
+    margin-top: -80px;
+    margin-bottom: 40px;
+}
+
+.agreement-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.agreement-checkbox input {
+    display: none;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+}
+.agreement-checkbox input:checked + .checkmark {
+    background-color: #E3B873;
+    border-color: #E3B873;
+}
+
+.agreement-checkbox input:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 3px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
 .feedback {
     margin-top: 80px;
     background-image: url("./images/city_3.jpg");
