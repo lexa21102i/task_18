@@ -441,6 +441,13 @@ body * {
     align-items: flex-end;
     justify-content: space-between;  
     max-width: 800px;
+    position: relative;
+}
+
+.broadcast-form .check-mark-wrapper {
+    position: absolute;
+    left: calc(50% - 162px);
+    top: 100%;
 }
 
 .name-label,
@@ -1542,7 +1549,7 @@ body * {
 
     .project-image-mobile .circular-block {
         position: absolute;
-        top: 50%;
+        top: calc(50% - 35px);
         text-align: center;
     }
 
@@ -1601,7 +1608,7 @@ body * {
     .apartment {
         background-image: none;
         background-color: white;
-        padding: 20px 0;
+        padding: 0;
     }
 
     .apartment-content {
@@ -1667,6 +1674,33 @@ body * {
 
     .broadcast-form {
         position: absolute;
+        max-width: 90%;
+        width: 90%;
+        left: 5%;
+    }
+
+    .apartment-container {
+        background: linear-gradient(to bottom, #ffffff 0%, #ffffff 63%, #131313 50%, #131313 100%);
+    }
+
+    .questions {
+        padding-top: 60px;
+    }
+
+    .hero {
+        padding: 100px 0 100px 0;
+        height: auto;
+    }
+
+    .completed-projects .projects-container {
+        min-height: auto;
+        padding-bottom: 88px;
+    }
+
+    .broadcast-form .check-mark-wrapper {
+        position: relative;
+        left: initial;
+        top: initial;
     }
 
 }
