@@ -32,7 +32,7 @@ body * {
     text-transform: uppercase;
     font-style: italic;
 }
-.button:hover, .button-calculate:hover, .submit-btn:hover, .price-button:hover {
+.button:hover, .button-calculate:hover, .submit-btn:hover, .price-button:hover, .customers-button-1:hover, .customers-button-2:hover {
     background: #d49837;
 }
 
@@ -46,7 +46,7 @@ body * {
 }
 
 .header, .completed-projects, .hero {
-    background-color: black;
+    background-color: #131313;
 }
 
 .header-content {
@@ -185,7 +185,7 @@ body * {
 }
 
 .completed-projects {
-    background-color: #000000;
+    background-color: #131313;
     padding-top: 80px;
     position: relative;
 }
@@ -262,6 +262,11 @@ body * {
     font-size: 14px;
     line-height: 27px;
     color: #FFFFFF;
+}
+
+.project-image-mobile {
+    display: none;
+    position: relative;
 }
 
 .project-info-grid {
@@ -496,7 +501,8 @@ body * {
 
 .name-label input,
 .phone-label input,
-.email-label input {
+.email-label input,
+.question-label input{
     font-family: 'Nunito Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -513,6 +519,9 @@ body * {
 .name-label input:focus,
 .name-label input:active,
 .name-label input:hover,
+.question-label input:focus,
+.question-label input:active,
+.question-label input:hover,
 .phone-label input:focus,
 .phone-label input:active,
 .phone-label input:hover,
@@ -573,7 +582,33 @@ body * {
     gap: 8.62px;
 }
 
-.check-mark {
+.checkmark-1 {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 1px solid #E3B873;
+    display: inline-block;
+    position: relative;
+}
+
+.agreement-checkbox input:checked + .checkmark-1 {
+    background-color: #E3B873;
+    border-color: #E3B873;
+}
+
+.agreement-checkbox input:checked + .checkmark-1::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 3px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* .check-mark {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -583,7 +618,7 @@ body * {
     width: auto;
     height: auto;
     display: block;
-}
+} */
 
 .check-mark-text {
     height: 16.24px;
@@ -754,7 +789,7 @@ body * {
     display: flex;
     flex-direction: column;
     gap: 5%;
-    width: 40%;
+    /*width: 40%;*/
     margin: 30px 0 30px 0;
     justify-content: space-between;
 }
@@ -766,7 +801,7 @@ body * {
     background: #E3B873;
     border: 8px solid #FFFFFF;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
-    border-radius: 30px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -920,14 +955,38 @@ body * {
     transform: rotate(45deg);
 }
 
+.save-block {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.circular-block {
+    background-color: #E3B873;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    padding: 15px;
+}
+
+.circular-block img {
+    width: 100%;
+}
+
+.text-block {
+    color: #E3B873;
+    align-self: center;
+}
+
 .apartment {
     background-image: url('./images/apartment.jpg');
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: multiply;
-    padding: 100px 0;
-    margin-top: 80px;
+    padding: 70px 0;
+    margin-top: 250px;
 }
 
 .apartment::before {
@@ -946,6 +1005,7 @@ body * {
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
+    position: relative;
 }
 
 .apartment-content {
@@ -996,6 +1056,9 @@ body * {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     max-width: 50%;
+    top: -15%;
+    position: absolute;
+    right: 5%;
 }
 
 .gallery-item {
@@ -1038,8 +1101,6 @@ body * {
 
 .clients {
     margin-top: 80px;
-    background-image: url("./images/city_2.jpg");
-    background-repeat: repeat-x;
 }
 
 .our-clients {
@@ -1056,6 +1117,7 @@ body * {
 
 .customers-card {
     width: 30%;
+    margin-bottom: 80px;
 }
 
 .white-rectangle-2 {
@@ -1155,6 +1217,17 @@ body * {
     display: inline-block;
 }
 
+.questions {
+    background-image: url("./images/city_2.jpg");
+    background-repeat: repeat-x;
+    background-size: contain;
+    height: 310px;
+}
+
+.questions .container {
+    position: relative;
+}
+
 .questions-form {
     position: relative;
     z-index: 1;
@@ -1189,7 +1262,11 @@ body * {
 
 .questions-form-block {
     padding: 30px 40px;
-    width: 45%;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 17.5%;
 }
 
 .questions-form .check-mark-wrapper {
@@ -1240,6 +1317,12 @@ body * {
     margin-bottom: 30px;
 }
 
+.questions-form .agreement-input-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
 .questions-form .input-line {
     width: 100%;
 }
@@ -1285,14 +1368,19 @@ body * {
     transform: rotate(45deg);
 }
 
+.submit-btn-mobile {
+    display: none;
+}
+
 .feedback {
-    margin-top: 80px;
+    /*padding-top: 310px;*/
+    /*margin-top: 80px;*/
     background-image: url("./images/city_3.jpg");
     background-size: cover;
     background-position: center;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: multiply;
-    padding: 60px 0 60px 0;
+    padding: 310px 0 60px 0;
 }
 
 .feedback .container {
@@ -1393,4 +1481,192 @@ body * {
 
 .footer-button:hover {
     background: #d49837;
+}
+
+@media (max-width: 1299px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .header-navigation,
+    .header button,
+    .repair-icons,
+    .project-nav,
+    .clients,
+    .measurements,
+    .footer,
+    .project-image,
+    .submit-btn-desktop,
+    .apartment-gallery,
+    .apartment-list {
+        display: none;
+    }
+
+    .hero-container button, .name-label, .phone-label, .email-label, .input-line, .project-image-mobile img, .agreement-input-wrapper, .submit-btn-mobile, .projects-description, .apartment-title {
+        width: 100%;
+    }
+
+    .hero-container .button-calculate {
+        margin-bottom: 35px;
+    }
+
+    .completed-projects .projects-container,
+    .broadcast-form,
+    .types-cards,
+    .questions-form,
+    .project-image-mobile,
+    .submit-btn-mobile {
+        display: block;
+    }
+
+    .completed-projects .left, .completed-projects .right {
+        max-width: 100%;
+    }
+
+    .control {
+        margin-top: 0px;
+        background-color: #131313;
+    }
+
+    .broadcast-text, .input-label, .name-label label, .phone-label label, .email-label label, .agreement-checkbox {
+        color: white;
+    }
+
+    .input-line {
+        border-color: white;
+    }
+
+    .projects-title, .projects-description, .apartment-title {
+        text-align: center;
+    }
+
+    .project-image-mobile .circular-block {
+        position: absolute;
+        top: 50%;
+        text-align: center;
+    }
+
+    .project-image-mobile .circular-block img {
+        width: 60%;
+    }
+
+    .arrow-left {
+        left: 15px;
+    }
+
+    .arrow-right {
+        right: 15px;
+    }
+
+    .project-info-grid {
+        margin-top: 60px;
+    }
+
+    .control {
+        padding-top: 80px;
+        padding-bottom: 410px;
+    }
+
+    .repair-image {
+        margin-top: 61px;
+    }
+
+    .name-label {
+        margin-bottom: 70px;
+    }
+
+    .phone-label {
+        margin-bottom: 34px;
+    }
+
+    .submit-btn-mobile {
+        margin-top: 60px;
+    }
+
+    .broadcast-form {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .repair-icon {
+        margin-bottom: 63px;
+    }
+
+    .types-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 250px;
+    }
+
+    .apartment {
+        background-image: none;
+        background-color: white;
+        padding: 20px 0;
+    }
+
+    .apartment-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .questions, .feedback, .control, .completed-projects {
+        background-image: none;
+        background-color: #131313;
+    }
+
+    .questions-form-block {
+        padding: 0;
+        width: 100%;
+        position: relative;
+        margin: 0;
+        left: 0;
+    }
+
+    .questions-form .name-label {
+        margin-bottom: 60px;
+    }
+
+    .questions-form {
+        padding: 0;
+    }
+
+    .questions-form .phone-label {
+        margin-bottom: 50px;
+    }
+
+    .questions-title {
+        margin-bottom: 50px;
+    }
+
+    .questions-form .agreement-wrapper {
+        margin-top: 40px;
+        margin-bottom: 55px;
+        width: 100%;
+    }
+
+    .questions-form .agreement-input-wrapper {
+        width: 100%;
+    }
+
+    .questions-form .submit-btn {
+        max-width: 100%;
+    }
+
+    .feedback .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .feedback-text-block {
+        margin-top: 60px;
+    }
+
+    .map, .map img {
+        max-width: 100%;
+    }
+
+    .broadcast-form {
+        position: absolute;
+    }
+
 }
